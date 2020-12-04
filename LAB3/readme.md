@@ -29,6 +29,10 @@ or
 python student_evaluation.py
 ```
 
+## Description
+
+StudentEvaluation can predict how much you can potentially get from your coop candidate based on amout of memes sent to you by your coop candidate, score of last coop project of your coop candidate and hours a week that your coop candidate can dedicate to studying.
+
 ## About & Creators
 
 - Jakub Pilachowski s17999
