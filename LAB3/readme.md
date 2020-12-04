@@ -3,7 +3,7 @@
 ## Instalation
 
 1. Install Python (recommended min. 3.9)
-2. Install EasyAI:
+2. Install libs:
 
 ```text
 pip3 install scikit-fuzzy==0.4.2
