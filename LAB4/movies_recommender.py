@@ -154,6 +154,20 @@ class MovieAndTVShowRecommender:
             raise TypeError('Score Type ' + self.score_type + ' does not exists!')
         
     def take_positive_movies(self, dataset, user, filtered_list):
+        """
+            Taking movies from user with positive scores
+            
+            Parameters:
+            dataset (dictionary)
+                json with set of movies/tv shows and their rating grouped in objects by viewer
+            user (string)
+                user of user who we take scores for
+            filtered list(list) 
+                list of movies without comparing user movies
+
+            Returns:
+                list of movies with scores ((str, float))
+        """
         positive_movies = []
 
         for item in filtered_list:
@@ -165,6 +179,21 @@ class MovieAndTVShowRecommender:
         return positive_movies
 
     def take_negative_movies(self, dataset, user, filtered_list):
+        """
+            Taking movies from user with negative scores
+            
+            Parameters:
+            dataset (dictionary)
+                json with set of movies/tv shows and their rating grouped in objects by viewer
+            user (string)
+                user of user who we take scores for
+            filtered list(list) 
+                list of movies without comparing user movies
+
+            Returns:
+                list of movies with scores ((str, float))
+        """
+
         negative_movies = []
 
         for item in filtered_list:
@@ -175,7 +204,18 @@ class MovieAndTVShowRecommender:
 
         return negative_movies
 
+    
     def recommend_positive_negative_movies(self, data, input_user):
+        """
+            Recommends on output positive and negative movies by most matched users 
+            
+            Parameters:
+            dataset (dictionary)
+                json with set of movies/tv shows and their rating grouped in objects by viewer
+            input_user (string)
+                name of user for whom we are looking for matches
+
+        """
         user_scores = []
         positive_movies = []
         negative_movies = []
@@ -221,6 +261,15 @@ class MovieAndTVShowRecommender:
 
 
 def takeSecond(elem):
+    """
+        Compare method to sort list by second parameter in object
+
+        Parameters:
+            element comparing (object)
+        
+        Returns: 
+            second property of element (float)
+    """
     return elem[1]
 
 if __name__=='__main__':
